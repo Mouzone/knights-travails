@@ -21,7 +21,7 @@ function knightMoves(start, end) {
             const move = [x + dx, y + dy]
             if (!visited.has(move.toString()) &&
                 checkLegalMove(x + dx, y + dy)) {
-                
+
                 visited.add(move.toString())
                 queue.push([...path, move])
             }
@@ -41,3 +41,7 @@ function checkLegalMove(x, y){
 }
 
 knightMoves([3,3], [4,3])
+knightMoves([0,0],[1,2])
+knightMoves([0,0],[3,3])
+knightMoves([3,3],[0,0])
+knightMoves([0,0],[7,7])
